@@ -1,13 +1,15 @@
-# puppeteer-html-pdf
+# puppeteer-html-pdf-serverless
 
-> HTML to PDF converter for Node.js
+A variant of puppeteer-html-pdf.
+
+> HTML to PDF converter for Node.js using serverless
 
 [![NPM](https://img.shields.io/npm/v/puppeteer-html-pdf.svg)](https://www.npmjs.com/package/puppeteer-html-pdf) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Known Vulnerabilities](https://snyk.io/test/github/ultimateakash/puppeteer-html-pdf/badge.svg)](https://snyk.io/test/github/ultimateakash/puppeteer-html-pdf/badge.svg)
  
 ## Installation
 
 ```sh
-npm install puppeteer-html-pdf
+npm install puppeteer-html-pdf-serverless
 ```
 
 ## Signature
@@ -42,7 +44,10 @@ const pdfData = {
 }
 
 const options = {
-  format: 'A4'
+  format: 'A4',
+  args: {
+    browserWSEndpoint: 'wss://chrome.browserless.io?token=YOUR_TOKEN'
+  }
 } 
 
 const html = await readFile(__dirname + '/sample.html','utf8');  
@@ -63,7 +68,10 @@ const htmlPDF = require('puppeteer-html-pdf');
  
 const options = { 
   format: 'A4',
-  path: `${__dirname}/sample.pdf` // you can pass path to save the file
+  path: `${__dirname}/sample.pdf`, // you can pass path to save the file
+  args: {
+    browserWSEndpoint: 'wss://chrome.browserless.io?token=YOUR_TOKEN'
+  }
 }
 
 const content = "<style> h1 {color:red;} </style> <h1>Welcome to puppeteer-html-pdf</h1>";
@@ -87,7 +95,10 @@ const options = {
     right: '25px',
     top: '20px'
   },
-  path: `${__dirname}/sample.pdf` // you can pass path to save the file
+  path: `${__dirname}/sample.pdf`, // you can pass path to save the file
+  args: {
+    browserWSEndpoint: 'wss://chrome.browserless.io?token=YOUR_TOKEN'
+  }
 }
 
 const content = 'https://www.google.com';

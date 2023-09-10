@@ -1,7 +1,7 @@
 {
-  "name": "puppeteer-html-pdf",
+  "name": "puppeteer-html-pdf-serverless",
   "version": "2.1.2",
-  "description": "HTML to PDF converter for Node.js",
+  "description": "HTML to PDF converter for Node.js using serverless",
   "main": "lib/index.js",
   "directories": {
     "example": "examples",
@@ -38,7 +38,7 @@
   "bugs": {
     "url": "https://github.com/ultimateakash/puppeteer-html-pdf/issues"
   },
-  "homepage": "https://github.com/ultimateakash/puppeteer-html-pdf#readme",
+  "homepage": "https://github.com/ultimateakash/puppeteer-html-pd-serverlessf#readme",
   "dependencies": {
     "is-url": "^1.2.4",
     "lodash.has": "^4.5.2",
